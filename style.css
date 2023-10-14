@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* nav starts */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px 10px 40px;
+  height: 15vh;
+  /* background-color: rgb(124, 109, 140, 140); */
+}
+.nav-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-ul li a {
+  display: inline-block;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+}
+.nav-ul li a:hover {
+  color: rgb(149, 140, 157);
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  display: none;
+  min-width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+  display: block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f9f9f9;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.hamburger:focus {
+  outline: none;
+}
+
+/* nav ends */
+
+/* hero section starts */
+#main {
+  background-image: url(./assets/Decore.png);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+#hero .heading {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #df6951;
+}
+#hero .sub_heading {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+
+#hero .para {
+  font-size: 0.8rem;
+}
+
+#hero .sub_heading span {
+  background-image: url("./assets/Decore1.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 10px;
+}
+#hero .sec_col {
+  position: relative;
+  z-index: 0;
+}
+#hero .sec_col .plane-1 {
+  position: absolute;
+  top: 30%;
+}
+#hero .sec_col .plane-2 {
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+
+/************************* hero section end*********************** */
+
+/* ******************Services section starts **************************/
+#services .head h2,
+#destination .head h2 {
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+#services {
+  background-image: url("./assets/Group\ 4.png");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+#services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 16px;
+  justify-items: center;
+}
+
+#services .container .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10%;
+  border: none;
+}
+#services .container .card h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+#services .container .card p {
+  font-size: 16px;
+}
+#services .container .card:nth-child(2) {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 150px 100px 0px;
+}
+
+/* destination section starts */
+#destination .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-items: center;
+}
+#destination .container .card {
+  border: none;
+  border-radius: 23px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 150px 100px 0px;
+}
+
+#destination .container .card span,
+#destination .container .card p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #5e6282;
+}
+
+/* *******************book a trip************** */
+#book_a_trip .container .row h1,
+#testimonials h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+#book_a_trip .container .row h6 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.92px;
+  color: #5e6282;
+}
+#book_a_trip .container .row p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.92px;
+  color: #5e6282;
+}
+
+/* *****************book a trip ends****************** */
+
+#testimonials .testimonials {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+}
+#testimonials .card {
+  position: relative;
+  width: 100%;
+  border: none;
+}
+#testimonials #slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  width: 100%;
+}
+#testimonials .sidebar {
+  width: 60px;
+  height: 100%;
+  padding: 15px 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#testimonials .sidebar img {
+  width: 25px;
+  padding: 5px;
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#testimonials .sidebar img:hover {
+  background-color: #fff;
+}
+#testimonials #up-arrow {
+  transform: rotate(180deg);
+}
+/* styles for the dots */
+#testimonials .dots-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 140px;
+  position: relative;
+  bottom: 60px;
+}
+
+#testimonials .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#testimonials .dot.active-dot {
+  background-color: #5e6282; /* Color for the active dot */
+}
+
+/* *********************clients***************** */
+#clients .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#clients .container img:nth-child(3) {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 150px 100px 0px;
+}
+
+/* *******************subcription***************** */
+#subscription {
+  background-image: url("./assets/Group\ 4.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+#subscription .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("./assets/Group\ 78.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  position: relative;
+}
+#subscription .container input {
+  padding: 18px 40px;
+  width: 420px;
+  border-radius: 10px;
+  border: none;
+}
+#subscription .container button {
+  font-size: 17px;
+  padding: 18px 40px;
+  background-color: #df6951;
+  color: white;
+}
+#subscription h1 {
+  font-size: 33px;
+  font-weight: 600;
+  text-align: center;
+  color: #5e6282;
+}
+
+#subscription .send_icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+footer {
+  padding: 50px;
+  margin-top: 50px;
+  height: 50vh;
+}
+footer h2 {
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 66px;
+  color: #181e4b;
+}
+footer h4 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26.15px;
+  color: #080809;
+}
+footer h6 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #5e6282;
+  line-height: 24.9px;
+}
+footer a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.41px;
+  color: #5e6282;
+}
+footer .para {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16.19px;
+  color: #5e6282;
+}
+
+footer .copyright {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.43px;
+  color: #5e6282;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(75, 72, 72);
+    border-radius: 12px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  .nav-ul.show {
+    display: flex;
+  }
+  .nav-ul li a {
+    color: white;
+  }
+  .hamburger {
+    display: block;
+  }
+  #subscription .container input {
+    width: auto;
+  }
+  footer {
+    height: auto;
+  }
+}
